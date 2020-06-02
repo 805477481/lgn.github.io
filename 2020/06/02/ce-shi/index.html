@@ -500,7 +500,25 @@
 </ol>
 <h2 id="定制开发"><a href="#定制开发" class="headerlink" title="定制开发"></a>定制开发</h2><p>定制开发请联系作者</p>
 <h5 id="作者信息"><a href="#作者信息" class="headerlink" title="作者信息"></a>作者信息</h5><p>小c<br>小冷</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -796,6 +814,9 @@
                     <div class="summary block-with-text">
                         
                             
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
